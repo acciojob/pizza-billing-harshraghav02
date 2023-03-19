@@ -61,10 +61,10 @@ public class Pizza {
         this.bill = "Base Price Of The Pizza: "+ basePrice+"\n";
         String cheese = this.cheese?"Extra Cheese Added: 80\n":"";
         this.bill += cheese;
-        String extraTopping = this.extraTopping?"Extra Toppings Added: "+this.extraToppingPrice+"\n":"";
-        this.bill += extraTopping;
-        String takeAway = this.takeAway?"Paperbag Added: 20\n":"";
-        this.bill += takeAway;
+        String extraTopping = this.extraTopping?this.bill += "Extra Toppings Added: "+this.extraToppingPrice+"\n":"";
+        //this.bill += extraTopping;
+        String takeAway = this.takeAway?this.bill +="Paperbag Added: 20\n":"";
+
         this.bill += "Total Price: "+getPrice();
         return this.bill;
     }
