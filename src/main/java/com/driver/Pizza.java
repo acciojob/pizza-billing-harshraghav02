@@ -58,14 +58,14 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         int basePrice = isVeg?300:400;
-        this.bill = "Base Price Of The Pizza: "+ basePrice+"\n";
-        String cheese = this.cheese?"Extra Cheese Added: 80\n":"";
+        this.bill = "Base Price Of The Pizza : "+ basePrice+"\n";
+        String cheese = this.cheese?"Extra Cheese Added : 80\n":"";
         this.bill += cheese;
-        String extraTopping = this.extraTopping?this.bill += "Extra Toppings Added: "+this.extraToppingPrice+"\n":"";
+        String extraTopping = this.extraTopping?this.bill += "Extra Toppings Added : "+this.extraToppingPrice+"\n":"";
         //this.bill += extraTopping;
-        String takeAway = this.takeAway?this.bill +="Paperbag Added: 20\n":"";
+        String takeAway = this.takeAway?this.bill +="Paperbag Added : 20\n":"";
 
-        this.bill += "Total Price: "+getPrice();
+        this.bill += "Total Price : "+getPrice();
         return this.bill;
     }
 }
